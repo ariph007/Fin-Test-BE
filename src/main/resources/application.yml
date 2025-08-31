@@ -1,0 +1,62 @@
+logging:
+    level:
+        sql: debug
+        org.hibernate.orm.jdbc.bind: trace
+        com.zaxxer.hikari: trace
+        com.zaxxer.hikari.hibernate: trace
+#    org.flywaydb: debug
+    org.springframework.orm.jpa: DEBUG
+    org.springframework.transaction: DEBUG
+finology:
+    typicode:
+        base-url: https://jsonplaceholder.typicode.com
+spring:
+    application:
+        name: pos
+    datasource:
+        password: postgres
+        url: jdbc:postgresql://127.0.0.1:5458/finology
+        username: postgres
+        driver-class-name: org.postgresql.Driver
+        connectionTimeout: 60000
+        maxPoolSize: 2000
+        idleTimeout: 30000
+        minIdle: 5
+        maxLifetime: 30000
+        poolName: masterdb-connection-pool
+        hikari:
+            leak-detection-threshold: 30000
+            auto-commit: true
+    jpa:
+        show-sql: true
+        properties:
+            hibernate:
+                format_sql: true
+    flyway:
+        url: jdbc:postgresql://127.0.0.1:5458/finology
+        user: postgres
+        password: postgres
+        driver-class-name: org.postgresql.Driver
+        hikari:
+            maximum-pool-size: 2000
+                connection-timeout:60000
+                idle-timeout:300000
+                min-idle:5
+                max-lifetime:30000
+            auto-commit: true
+            pool-name: masterdb-connection-pool
+    jackson:
+        default-property-inclusion: non_null
+        generator:
+            ignore-unknown: true
+        serialization:
+            fail-on-empty-beans: false
+            write-char-arrays-as-json-arrays: true
+        deserialization:
+            read-unknown-enum-values-as-null: true
+            fail-on-ignored-properties: false
+            fail-on-unknown-properties:
+springfox:
+    documentation:
+        swagger-ui:
+            enabled=true:
