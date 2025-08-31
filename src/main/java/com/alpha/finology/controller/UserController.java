@@ -22,7 +22,7 @@ public class UserController {
 
   @GetMapping("/users")
   public ResponseEntity<WebResponse<List<UserResponse>>> findAllByPagingAndSearch(
-      PagingRequest pagingRequest, String inquiry, String status) {
+      PagingRequest pagingRequest, String inquiry) {
     return ResponseEntity.ok(ResponseHelper.ok(pagingRequest, service.getAll(pagingRequest, inquiry)));
   }
 }
