@@ -6,5 +6,5 @@
 
 Flyway Database migration will run when you start your server, on init it will fetch from https://jsonplaceholder.typicode.com and save the data to the database(it only run once)
 
-# Swagger
+## Swagger
 http://localhost:8080/swagger-ui.html
