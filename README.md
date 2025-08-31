@@ -8,3 +8,17 @@ Flyway Database migration will run when you start your server, on init it will f
 
 ## Swagger
 http://localhost:8080/swagger-ui.html
+
+## Feature
+- Pagination
+- Sorting
+- Filter
+  (Using Spring Data JPA Specifications)
+  
+## Dependency
+- Springboot
+- Springdata JPA
+- Postgresql
+- Swagger
+- Flyway
+- Docker
