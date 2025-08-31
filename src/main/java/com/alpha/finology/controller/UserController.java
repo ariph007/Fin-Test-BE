@@ -23,34 +23,6 @@ public class UserController {
   @GetMapping("/users")
   public ResponseEntity<WebResponse<List<UserResponse>>> findAllByPagingAndSearch(
       PagingRequest pagingRequest, String inquiry, String status) {
-    return ResponseEntity.ok(ResponseHelper.ok(pagingRequest, service.getAll(pagingRequest, inquiry, status)));
+    return ResponseEntity.ok(ResponseHelper.ok(pagingRequest, service.getAll(pagingRequest, inquiry)));
   }
-//
-//  @PostMapping("/departments")
-//  public ResponseEntity<WebResponse<String>> addCategory(
-//      @RequestBody CreateDepartmentRequest createDepartmentRequest) {
-//    departmentService.add(createDepartmentRequest);
-//    return ResponseEntity.ok(ResponseHelper.ok("department has been added successfully."));
-//  }
-//
-//  @GetMapping(
-//      value = "/departments/{id}",
-//      produces = MediaType.APPLICATION_JSON_VALUE)
-//  public ResponseEntity<WebResponse<DepartmentResponse>> getById(@PathVariable String id) {
-//    return ResponseEntity.ok(ResponseHelper.ok(departmentService.getDepartmentById(id)));
-//  }
-//
-//  @DeleteMapping(value = "/departments/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-//  public ResponseEntity<WebResponse<String>> delete(@PathVariable String id) {
-//    departmentService.deleteDepartment(id);
-//    return ResponseEntity.ok(ResponseHelper.ok("department has been deleted successfully."));
-//  }
-//
-//  @PutMapping(value = "/departments")
-//  public ResponseEntity<WebResponse<String>> updateDepartment(@RequestBody UpdateDepartmentRequest updateDepartmentRequest) {
-//    departmentService.updateDepartment(updateDepartmentRequest);
-//    return ResponseEntity
-//        .ok(ResponseHelper.ok("department has been updated"));
-//  }
-
 }

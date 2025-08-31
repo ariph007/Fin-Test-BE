@@ -129,7 +129,7 @@ public class UserServiceImpl implements UserService {
 
 
   @Override
-  public Page<UserResponse> getAll(PagingRequest pagingRequest, String inquiry, String status) {
+  public Page<UserResponse> getAll(PagingRequest pagingRequest, String inquiry) {
 
     PageRequest pageRequest = PageRequest.of(pagingRequest.getPage(), pagingRequest.getPageSize(),
         SpecificationHelper.createSort(pagingRequest.getSortBy()));
