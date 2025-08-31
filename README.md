@@ -5,3 +5,6 @@
 - Start your server and it will running in default port 8080
 
 Flyway Database migration will run when you start your server, on init it will fetch from https://jsonplaceholder.typicode.com and save the data to the database(it only run once)
+
+# Swagger
+http://localhost:8080/swagger-ui.html
